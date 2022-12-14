@@ -9,4 +9,10 @@ const reverseString = string => {
   return [...string].reduce((x, y) => y.concat(x));
 }
 
-module.exports = { stringLength, reverseString }
+const capitalize = string => {
+  const first = string.charAt(0).toUpperCase()
+  const otherLetters = string.slice(1)
+  return first.concat(otherLetters)
+}
+
+module.exports = { stringLength, reverseString, capitalize }
