@@ -1,6 +1,5 @@
 const str = require('./string')
-const value = 'Random String'
-console.log(`value is ${value}`)
+const value = 'random string'
 // const value = ''
 
 describe('stringLength module', () =>{
@@ -15,7 +14,13 @@ describe('stringLength module', () =>{
 
 describe('reverseString module', () => {
   test('Reverse the string',()=>{
-    expect(str.reverseString(value)).toBe('gnirtS modnaR')
+    expect(str.reverseString(value)).toBe('gnirts modnar')
+  })
+})
+
+describe('Capitalize module', () =>{
+  test('Capitalize first letter',() =>{
+    expect(str.capitalize(value)).toBe('Random string')
   })
 })
 
