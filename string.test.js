@@ -1,13 +1,21 @@
-const stringLength = require('./string')
+const str = require('./string')
+const value = 'Random String'
+console.log(`value is ${value}`)
+// const value = ''
 
 describe('stringLength module', () =>{
-  const value = ''
-  console.log(`value is ${value}`)
   test('length of value is atleast 1', () =>{
-    expect(stringLength(value)).not.toBe(0)
+    expect(str.stringLength(value)).not.toBe(0)
   })
 
-  test('length of value is equal to 6', () =>{
-    expect(stringLength(value)).toBe(6)
+  test('length of value is equal to 13', () =>{
+    expect(str.stringLength(value)).toBe(13)
   })
 })
+
+describe('reverseString module', () => {
+  test('Reverse the string',()=>{
+    expect(str.reverseString(value)).toBe('gnirtS modnaR')
+  })
+})
+
